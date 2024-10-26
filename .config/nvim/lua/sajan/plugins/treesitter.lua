@@ -10,7 +10,8 @@ return {
     local treesitter = require("nvim-treesitter.configs")
 
     -- configure treesitter
-    treesitter.setup({ -- enable syntax highlighting
+    treesitter.setup({
+      -- enable syntax highlighting
       highlight = {
         enable = true,
       },
@@ -43,6 +44,14 @@ return {
         "vimdoc",
         "c",
       },
+      -- list of parsers to ignore installing (for "all")
+      ignore_install = { "haskell" },
+      -- install languages synchronously (only applied to `ensure_installed`)
+      sync_install = false,
+      -- automatically install missing parsers when entering buffer
+      auto_install = true,
+      -- List of modules
+      modules = {},
       incremental_selection = {
         enable = true,
         keymaps = {
@@ -55,3 +64,4 @@ return {
     })
   end,
 }
+

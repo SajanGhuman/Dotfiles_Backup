@@ -20,4 +20,3 @@ require("lazy").setup({ { import = "sajan.plugins" }, {import = "sajan.plugins.l
     notify = false,
   },
 })
-
